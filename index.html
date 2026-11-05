@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Node2Shell Lab — CVE-2026-111497</title>
+  <style>
+    :root { color-scheme: dark; }
+    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+           max-width: 780px; margin: 4rem auto; padding: 0 1.25rem;
+           background: #0d1117; color: #c9d1d9; line-height: 1.6; }
+    h1 { color: #f0f6fc; border-bottom: 1px solid #30363d; padding-bottom: .5rem; }
+    a { color: #58a6ff; }
+    code { background: #161b22; padding: .15rem .4rem; border-radius: 4px;
+           font-size: .9em; }
+    .tag { display: inline-block; background: #b62324; color: #fff;
+           font-size: .75rem; padding: .15rem .5rem; border-radius: 4px;
+           margin-left: .4rem; vertical-align: middle; }
+    table { border-collapse: collapse; width: 100%; margin: 1rem 0; }
+    th, td { text-align: left; padding: .45rem .6rem; border-bottom: 1px solid #30363d; }
+    th { color: #8b949e; font-weight: 600; }
+    footer { margin-top: 3rem; font-size: .85rem; color: #8b949e;
+             border-top: 1px solid #30363d; padding-top: 1rem; }
+  </style>
+</head>
+<body>
+  <h1>Node2Shell Lab <span class="tag">CVE-2026-111497</span></h1>
+  <p>A sandbox lab for the Node.js Brotli decoder out-of-bounds write,
+     demonstrating how a runtime-level flaw becomes exploitable through
+     ordinary Express request handling.</p>
+
+  <h2>CVE Summary</h2>
+  <table>
+    <tr><th>CVE</th><td>CVE-2026-111497 ("Node2Shell")</td></tr>
+    <tr><th>Class</th><td>Out-of-bounds write (memory corruption)</td></tr>
+    <tr><th>CVSS</th><td>9.2 (Critical)</td></tr>
+    <tr><th>Affected</th><td>Node.js 22.x / 24.x / 26.x before Oct 21 2026 patches</td></tr>
+    <tr><th>Fixed</th><td>22.23.4 / 24.22.1 / 26.12.1</td></tr>
+    <tr><th>Vector</th><td><code>Content-Encoding: br</code> on <code>express.json()</code> or <code>fetch()</code></td></tr>
+  </table>
+
+  <h2>Repository</h2>
+  <p>Source, setup instructions, and mitigations:
+     <a href="https://github.com/muba76ma/node2shell-lab">github.com/muba76ma/node2shell-lab</a></p>
+
+  <footer>Educational use only. Author: Barki Mustapha — MIT License.</footer>
+</body>
+</html>
